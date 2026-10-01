@@ -3,8 +3,8 @@
 
 using namespace std;
 
-// Struct untuk menyimpan data info mahasiswa
-struct infotype {
+// Struct untuk menyimpan data mahasiswa
+struct mahasiswa {
     string nim;
     string nama;
     string kehadiran;
@@ -12,7 +12,7 @@ struct infotype {
 
 // Struct untuk elemen list
 struct ElmList {
-    infotype info;
+    mahasiswa info;
     ElmList* next;
 };
 
@@ -117,7 +117,7 @@ int main() {
 
     string nim, nama, kehadiran;
 
-    cout << " masukkan data 40 mahasiswa (Format: NIM NAMA KEHADIRAN):\n";
+    cout << "Silakan masukkan data 40 mahasiswa (Format: NIM NAMA KEHADIRAN):\n";
     // Input 40 data sesuai permintaan
     for (int i = 0; i < 40; i++) {
         cin >> nim >> nama >> kehadiran;
@@ -133,9 +133,9 @@ int main() {
     
     // Contoh Insert First tambahan
     cout << "Menambahkan 1 mahasiswa baru di awal (Insert First)...\n";
-    insertFirst(L, createNewElement("9999", "Test", "Hadir"));
+    insertFirst(L, createNewElement("9999", "Tester", "Hadir"));
     
-    // Delete berdasarkan NIM
+    // Contoh Delete berdasarkan NIM
     cout << "Masukkan NIM mahasiswa yang ingin dihapus (contoh dari inputan Anda): ";
     string targetNim;
     cin >> targetNim;
